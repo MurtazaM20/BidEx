@@ -14,7 +14,7 @@ export const AddAuction = ({ setAuction }) => {
 
   const { currentUser } = useContext(AuthContext);
 
-  const openForm = () => setShowForm(true);
+  const openForm = () => setShowForm(true); 
   const closeForm = () => setShowForm(false);
 
   const imgTypes = ['image/png', 'image/jpeg', 'image/jpg'];
@@ -101,9 +101,9 @@ export const AddAuction = ({ setAuction }) => {
               <Col>
                 <Form.Group>
                   <Form.Label>Item Image</Form.Label>
-                  <Form.File
+                  <Form.Control
+                    type='file'
                     label="Select Item Image"
-                    custom
                     required
                     ref={itemImage}
                   />
