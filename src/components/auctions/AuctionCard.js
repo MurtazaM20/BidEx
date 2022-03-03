@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import Countdown from 'react-countdown';
 import { AuthContext } from '../../context/AuthContext';
+import "D:/BidEx/bidex/src/index.css"
+import "D:/Bidex/bidex/src/styles/cancelbutton.css"
 
 const renderer = ({ days, hours, minutes, seconds, completed, props }) => {
   if (completed) {
@@ -9,10 +11,12 @@ const renderer = ({ days, hours, minutes, seconds, completed, props }) => {
 
   return (
     <div className="col">
-      <div className="card shadow-sm">
+      <div className="card">
         <div
           style={{
-            height: '320px',
+            height: '254px',
+            width: '190px',
+            boxShadow: 'rgba(151, 65, 252, 0.2) 0 15px 30px -5px',
             backgroundImage: `url(${props.item.imgUrl})`,
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
@@ -25,7 +29,7 @@ const renderer = ({ days, hours, minutes, seconds, completed, props }) => {
           <p className="lead display-6">{props.item.title}</p>
           <div className="d-flex jsutify-content-between align-item-center">
             <h5>
-              {days * 24 + hours} hr: {minutes} min: {seconds} sec
+              {hours} hr: {minutes} min: {seconds} sec
             </h5>
           </div>
           <p className="card-text">{props.item.desc}</p>
