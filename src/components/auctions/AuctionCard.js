@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import Countdown from 'react-countdown';
 import { AuthContext } from '../../context/AuthContext';
-import "D:/BidEx/bidex/src/index.css"
 import "D:/Bidex/bidex/src/styles/cancelbutton.css"
 
 const renderer = ({ days, hours, minutes, seconds, completed, props }) => {
@@ -45,9 +44,12 @@ const renderer = ({ days, hours, minutes, seconds, completed, props }) => {
               ) : props.owner.email === props.item.email ? (
                 <div
                   onClick={() => props.endAuction(props.item.id)}
-                  className="btn btn-outline-secondary"
                 >
-                  Cancel Auction
+                  <button class="cancel"><span class="text">Cancel Auction</span><span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666
+                       3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg>
+                       </span></button>
                 </div>
               ) : props.owner.email === props.item.curWinner ? (
                 <p className="display-6">Winner</p>
@@ -56,9 +58,11 @@ const renderer = ({ days, hours, minutes, seconds, completed, props }) => {
                   onClick={() =>
                     props.bidAuction(props.item.id, props.item.curPrice)
                   }
-                  className="btn btn-outline-secondary"
                 >
-                  Bid
+                  
+                  <button class="register" type="submit">
+            <span class="text">BID</span>
+            </button>
                 </div>
               )}
             </div>

@@ -1,70 +1,64 @@
 /* CANCEL BUTTON */
 
 .cancel {
-    width: 100px;
+    width: 140px;
     height: 40px;
-    font-size: 15px;
-    line-height: 1em;
-    padding-left: 1px;
     cursor: pointer;
     display: flex;
+    padding-left: 1px;
     align-items: center;
     background: red;
     border: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    font-size: 14px !important;
+    border-radius: 5px !important;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
     background: #e62222;
-}
-
-.cancel,
-.cancel span {
+   }
+   
+   .cancel span {
     transition: 200ms;
-    padding-left: 0px;
-
-}
-
-.cancel .text {
+   }
+   
+   .cancel .text {
     transform: translateX(5px);
     color: white;
-    padding-left: 0px;
-
     font-weight: bold;
-}
-
-.cancel .icon {
+   }
+   
+   .cancel .icon {
     position: absolute;
     border-left: 1px solid #c41b1b;
-    transform: translateX(60px);
+    transform: translateX(102px);
     height: 40px;
     width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.cancel svg {
+   }
+   
+   .cancel svg {
     width: 15px;
     fill: #eee;
-}
-
-.cancel:hover {
+   }
+   
+   .cancel:hover {
     background: #ff3636;
-}
-
-.cancel:hover .text {
+   }
+   
+   .cancel:hover .text {
     color: transparent;
-}
-
-.cancel:hover .icon {
-    width: 100px;
+   }
+   
+   .cancel:hover .icon {
+    width: 150px;
     border-left: none;
     transform: translateX(0);
-}
-
-.cancel:focus {
+   }
+   
+   .cancel:focus {
     outline: none;
-}
-
-.cancel:active .icon svg {
+   }
+   
+   .cancel:active .icon svg {
     transform: scale(0.8);
-}
+   }

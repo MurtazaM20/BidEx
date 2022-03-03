@@ -115,9 +115,9 @@ export const AddAuction = ({ setAuction }) => {
             <Button variant="secondary" onClick={closeForm}>
               Cancel
             </Button>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
+            <button class="login" type="submit">
+            <span class="text">Submit</span>
+            </button>
           </Modal.Footer>
         </form>
       </Modal>
